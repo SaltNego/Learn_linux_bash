@@ -1,9 +1,12 @@
-
+## while循环
+### 基本格式
+````bash
 while expression
 do
 	command
 done
-
+````
+````bash
 root@kali:~/Desktop# vim while01.sh 
 root@kali:~/Desktop# cat while01.sh 
 #!/bin/bash
@@ -40,8 +43,9 @@ wrong,try again.
 wrong,try again.
 8
 You win!!!
+````
 
-
+````bash
 root@kali:~/Desktop# vim students.txt
 root@kali:~/Desktop# cat students.txt 
       Name        1st        2nd        3th      Total
@@ -64,10 +68,11 @@ my name is VBird, time1 is 23000 , TOTAL IS 72000.00
 my name is DMTsai, time1 is 21000 , TOTAL IS 64000.00
 my name is Bird2, time1 is 43000 , TOTAL IS 126000.00
 root@kali:~/Desktop# 
+````
 
-
-while wuxian xunhuan
-
+### while的无限循环
+````bash
+#三种形式
 while ((1))
 do
 	command
@@ -82,7 +87,9 @@ while :
 do
 	command
 done
+````
 
+````bash
 
 oot@kali:~/Desktop# service apache2 status
 ● apache2.service - The Apache HTTP Server
@@ -97,7 +104,10 @@ root@kali:~/Desktop# service apache2 status
      Docs: https://httpd.apache.org/docs/2.4/
   Process: 4250 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/SUCCESS)
  Main PID: 4261 (apache2)
+````
 
+````bash
+#检测服务是否开启
 root@kali:~/Desktop# cat while05.sh 
 #!/bin/bash
 while true
@@ -118,10 +128,12 @@ HTTP IS RUNNING
 HTTP IS RUNNING 
 HTTP IS RUNNING 
 HTTP IS RUNNING 
+````
 
+### 嵌套循环
 
-qiantao xunhuan
-
+````bash
+# 打印99乘法表
 root@kali:~/Desktop# vim nesting01.sh
 root@kali:~/Desktop# cat nesting01.sh 
 #!/bin/bash
@@ -144,9 +156,11 @@ root@kali:~/Desktop# bash nesting01.sh
 7*1=7 7*2=14 7*3=21 7*4=28 7*5=35 7*6=42 7*7=49 7*8=56 7*9=63 
 8*1=8 8*2=16 8*3=24 8*4=32 8*5=40 8*6=48 8*7=56 8*8=64 8*9=72 
 9*1=9 9*2=18 9*3=27 9*4=36 9*5=45 9*6=54 9*7=63 9*8=72 9*9=81 
+````
 
-break xunhuan
-
+### while循环中的break 
+````bash
+# 去除重复
 root@kali:~/Desktop# vim nesting02.sh 
 root@kali:~/Desktop# cat nesting02.sh 
 #!/bin/bash
@@ -173,9 +187,11 @@ root@kali:~/Desktop# bash nesting02.sh
 7*1=7 7*2=14 7*3=21 7*4=28 7*5=35 7*6=42 7*7=49 
 8*1=8 8*2=16 8*3=24 8*4=32 8*5=40 8*6=48 8*7=56 8*8=64 
 9*1=9 9*2=18 9*3=27 9*4=36 9*5=45 9*6=54 9*7=63 9*8=72 9*9=81 
+````
 
-
-continue sushu 
+###continue 用法
+````bash
+# 寻找100以内的素数
 root@kali:~/Desktop# vim continue.01.sh
 root@kali:~/Desktop# cat continue.01.sh 
 #!/bin/bash
@@ -194,7 +210,7 @@ root@kali:~/Desktop# bash continue.01.sh
 1 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 101 
 root@kali:~/Desktop# 
 
-
+````
 
 
 

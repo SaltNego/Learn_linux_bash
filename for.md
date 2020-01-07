@@ -1,11 +1,14 @@
-xunhuan
+## For循环
+### for的列表循环
 
-
+````bash
 for VARIABLE in (list)
 do
 	command
 done
+````
 
+````bash
 root@kali:~/Desktop# cat fruit01.sh 
 #!/bin/bash
 for FRUIT in apple banana orange pear
@@ -13,7 +16,9 @@ do
         echo "$FRUIT is my favorite"
 done
 echo "no more fruit"
+````
 
+````bash
 root@kali:~/Desktop# bash fruit01.sh 
 apple is my favorite
 banana is my favorite
@@ -36,8 +41,9 @@ orange is your favorite
 pear is your favorite
 no more
 root@kali:~/Desktop# 
+````
 
-
+````bash
 root@kali:~/Desktop# vim for_list.sh
 root@kali:~/Desktop# cat for_list.sh 
 #!/bin/bash
@@ -45,7 +51,9 @@ for VAR in 1 2 3 4 5
 do
         echo "look $VAR times"
 done
+````
 
+````bash
 root@kali:~/Desktop# bash for_list.sh 
 look 1 times
 look 2 times
@@ -64,9 +72,11 @@ echo "sum is $sum"
 root@kali:~/Desktop# bash for_list03.sh 
 sum is 500
 root@kali:~/Desktop# 
+````
 
-在shell中可以使用let来指示下面是算术表达式，let表达式内变量不用加$
+**PS:在shell中可以使用let来指示下面是算术表达式，let表达式内变量不用加$**
 
+````bash
 root@kali:~/Desktop# vim for_list04.sh
 root@kali:~/Desktop# cat for_list04.sh 
 #!/bin/bash
@@ -79,7 +89,9 @@ echo "sum is $sum``"
 root@kali:~/Desktop# bash for_list04.sh 
 sum is 2500
 root@kali:~/Desktop# 
+````
 
+````bash
 
 root@kali:~/Desktop# vim for_list05.sh
 root@kali:~/Desktop# cat for_list05.sh 
@@ -96,15 +108,17 @@ root@kali:~/Desktop# bash for_list05.sh
 -rw-r--r-- 1 root root 110 Jan  4 21:59 fruit01.sh
 -rw-r--r-- 1 root root 122 Jan  4 22:03 fruit02.sh
 -rw-r--r-- 1 root root 709 Jan  4 22:05 read.md
+````
 
-
-no list xunhuan
-
+### 无列表循环
+````bash
 for VARIABLE
 do
 	command
 done
+````
 
+````bash
 root@kali:~/Desktop# vim for01.sh
 root@kali:~/Desktop# cat for01.sh 
 #!/bin/bash
@@ -117,15 +131,17 @@ root@kali:~/Desktop# bash for01.sh 123 456 789
 123456789ok
 root@kali:~/Desktop# bash for01.sh 123
 123ok
+````
 
-
-lei C xunhuan
-
+### 类C循环
+````bash
 for ((expression1;expression2;expression3))
 do
 	command
 done
+````
 
+````bash
 root@kali:~/Desktop# vim c_for01.sh
 root@kali:~/Desktop# cat c_for01.sh 
 #!/bin/bash
@@ -135,7 +151,7 @@ do
         echo -n "num is $i"
 done
 root@kali:~/Desktop# bash c_for01.sh 
-  
+
 num is 1  
 num is 2  
 num is 3  
@@ -185,10 +201,10 @@ root@kali:~/Desktop# bash c_for03.sh
 sum1 is 5050
 sum2 is 2500
 root@kali:~/Desktop#
+````
 
-
-for wuxian xunhuan
-
+### for 无限循环
+````bash
 root@kali:~/Desktop# cat c_for05.sh 
 #!/bin/bash
 for ((;1;))
@@ -196,9 +212,10 @@ do
         echo "null loop"
 done
 root@kali:~/Desktop# bash c_for05.sh 
+````
 
 
 
 
-
-
+​```
+````
