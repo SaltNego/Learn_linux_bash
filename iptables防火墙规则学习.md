@@ -48,4 +48,8 @@ Serving HTTP on 0.0.0.0 port 80 ...
 ![](https://raw.githubusercontent.com/SaltNego/MarkdownPics/master/image/20200109181630.png)
 
 
-
+### 机器全断网操作
+````bash
+root@Righteous:~# iptables -P INPUT DROP
+root@Righteous:~# iptables -P OUTPUT DROP
+```
